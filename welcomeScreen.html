@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Welcome </title>
+		<script type="text/javascript" src="cookies.js"></script> 
+		<script >
+		    function openGame() {
+			    if (document.getElementById("diffLevel").innerHTML == "Easy"){
+			        window.location = 'easy.html';}
+				if (document.getElementById("diffLevel").innerHTML == "Medium"){
+			        window.location = 'medium.html';}
+				if (document.getElementById("diffLevel").innerHTML == "Difficult"){
+			        window.location = 'diff.html';}
+			}
+	    </script>
+    </head>
+    <body onload="displayData()">
+	     <div id="form">
+			<h1>
+				  Welcome
+			</h1>
+	            <form id="form" method="post" action="">
+				   <table>
+						<tr>
+                           <td>Welcome: <label id="name" ></label></td>
+						</tr>
+						<tr>
+			               <td>Selected Difficulty: <label id="diffLevel" ></label></td>
+						</tr>
+						<tr>
+			               <td>Your Last Score: <label id="Score" value="0"></label></td>
+						</tr>
+						<tr>
+				           <td><button type="button" onclick="deleteCookie()">Forget Me</button></td>
+						</tr>
+						<tr>
+                           <td><button type="button" onclick="openGame()">Start</button></td>
+						<tr>
+                </form>
+						  
+	    </div>
+	</body>
+</html>

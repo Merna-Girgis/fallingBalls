@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="text.css">
+<script type="text/javascript" src="easy.js"></script> 
+<script type="text/javascript" src="cookies.js"></script> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script> 
+var score = 0;
+
+$(document).on("click", ".droper1", function(){
+   score++;
+    $(this).addClass("clicked");
+   jQuery(this).remove();
+   document.getElementById("score").innerHTML = score;
+   highScore = document.getElementById("score").textContent;
+   setCookie("highScore", highScore, 1);
+});
+
+$(document).on("click", ".droper2", function(){
+   jQuery(this).remove();
+   alert("you die RED");
+   highScore = document.getElementById("score").textContent;
+   setCookie("highScore", highScore, 1);
+});
+
+$(document).on("click", ".droper3", function(){
+   score = score+3;
+   jQuery(this).remove();
+   document.getElementById("score").innerHTML = score;
+   highScore = document.getElementById("score").textContent;
+   setCookie("highScore", highScore, 1);
+});
+</script> 
+</head>
+<body>
+    <table>
+		<tr>
+            <td>Score :</td>
+			<td><label type="text" id="score" name="score"></td>
+	    </tr>
+		<tr>
+            <td>Missed Green Boxes :</td>
+			<td><label type="text" id="missed" name="missed"></td>
+	    </tr>
+    </table>
+<div id="container" class="container"></div>
+
+</body>
+</html>

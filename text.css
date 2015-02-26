@@ -1,0 +1,29 @@
+.droper1{
+    width: 100px; 
+	height: 100px; 
+	background: green; 
+	-moz-border-radius: 50px; 
+	-webkit-border-radius: 50px; 
+	border-radius: 50px;
+    position:absolute;
+}
+
+.droper2{
+     width: 100px; 
+	height: 100px; 
+	background: red; 
+	-moz-border-radius: 50px; 
+	-webkit-border-radius: 50px; 
+	border-radius: 50px;
+    position:absolute;
+}
+
+.droper3{
+     width: 100px; 
+	height: 100px; 
+	background: blue; 
+	-moz-border-radius: 50px; 
+	-webkit-border-radius: 50px; 
+	border-radius: 50px;
+    position:absolute;
+}
